@@ -84,3 +84,35 @@ int prin(tree *present) //当前查找到的位置
     if(present->rroot)
         prin(present->root);
 }
+    
+void mode0_test(int n)
+{
+  vector<double> _arr;
+  for(int i = 0; i < n; i++)
+  {
+      _arr.push_back(i);
+  }
+  BSTSorting(_arr, 0);
+};
+
+void mode1_test(int n)
+{
+  vector<double> _arr;
+  for(int i = 0; i < n; i++)
+  {
+      _arr.push_back(i);
+  }
+  BSTSorting(_arr, 1);
+};
+
+
+int main()
+{
+    for(int i = 10000; i <= 50000; i+=10000){
+        mode0_test(i);
+    }
+    for(int i = 10000; i <= 50000; i+=10000){
+        mode1_test(i);
+    }
+  return 0;
+}
