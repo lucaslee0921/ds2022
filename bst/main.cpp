@@ -1,9 +1,30 @@
+#include<fstream>
+#include<algorithm>
+#include<iostream>
+#include<vector>
+#include<ctime>
+#include"BinarySearchTree.h"
+using namespace std;
 
+template <typename Comparable>
+void BSTSorting(std::vector<Comparable> &_arr, int _mode = 0)
+{
+if(_mode==1) //判断_mode是否为1，若是则打乱排序
+    {
+        random_shuffle(_arr.begin(),_arr.end());
+        cout << "因_mode = 1则打乱数组排序，数组的大小为" << _arr.size() << "。" << endl;    
+    }
+else
+    {
+        cout << "因_mode = 1则打乱数组排序，数组的大小为" << _arr.size() << "。" << endl;
+    }
+};
+        
 typedef struct Tree //构建一个结构存放数组，假设左分支总是小于另两个数据，而右分支则大于
 {
-    int data;
-    struct Tree *lroot; //左分支
-    struct Tree *rroot; //右分支
+int data;
+struct Tree *lroot; //左分支
+struct Tree *rroot; //右分支
 }tree;
 
 //新建节点
