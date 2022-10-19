@@ -82,7 +82,7 @@ int prin(tree *present) //当前查找到的位置
     
     //找右分支
     if(present->rroot)
-        prin(present->root);
+        prin(present->rroot);
 }
     
 void mode0_test(int n)
