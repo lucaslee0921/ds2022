@@ -1,0 +1,60 @@
+\documentclass[UTF8]{ctexart}
+\documentclass[a4paper]{article}
+
+\usepackage{listings,xcolor}
+\usepackage{graphicx}
+\usepackage[a4paper,left=25.4mm,right=25.4mm,top=29.8mm,bottom=29.8mm]{geometry}
+
+\lstset{numbers=left,
+    commentstyle=\color{blue!50},
+    columns=flexible}
+
+\title{作业三：AvlTree 课后作业4.37}
+
+\author{李巧杰 \\ 3210300366 \\ 信息与计算科学}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+Avl树的定义
+\end{center}
+
+\   在计算机科学中，AVL树是最先发明的自平衡二叉查找树。在AVL树中任何节点的两个子树的高度最大差别为1，所以它也被称为高度平衡树。增加和删除可能需要通过一次或多次树旋转来重新平衡这个树。AVL树得名于它的发明者G. M. Adelson-Velsky和E. M. Landis，他们在1962年的论文《An algorithm for the organization of information》中发表了它
+
+\begin{flushright}
+——摘自百度百科《Avl树》
+\end{flushright}
+
+\section{设计思路}
+
+\subsection{阅读并理解课本所提供的头文件 AvlTree.h 里头编写的所有代码}
+\hphantom 空例如： 其功能函数及各种已被定义的变量等等
+
+\subsection{根据题目所要求的 设计一个函数用作input一个二叉树，T，k1，k2，并符合题目要求}
+\hphantom 空例如：设计了一个符合题目的函数在文件AvlTree.h
+
+\subsection{编写测试程序 main.cpp 用作检验代码的复杂性，用时等等}
+\hphantom 空例如：输出运行程序所需要的时间
+
+\subsection{测试整个程序，记录结果，是否符合题意}
+
+\   首先，要求该程序应该循环多少次才能符合到测试的要求，因此主函数为设立循环次数；其次设计一个void程序，先创建一个Avl树，且将1-N的数字输入进去Avl树，并且设置上下确界以确保所有的值都在这个区间里。
+
+\   其次，程序需要记录循环开始时间、结束时间、记录整个程序一次循环所需要使用的时间，以用作反映其复杂性
+
+\newpage
+
+\section{理论分析}
+
+\subsection{论证复杂性符合要求：}
+
+\   由于Avl树是属于一维范围内的搜索程序，因此在执行程序中遍历的时间是 O(K)。如果在某种情况下，找到了大量的节点，那一定是与树的深度成正比。为此，由于平均深度为O(log N )，则我们可以得到平均界限为O(K+log N )
+
+\end{document}
+
+
+
+
+
