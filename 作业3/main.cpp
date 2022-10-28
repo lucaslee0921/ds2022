@@ -17,10 +17,23 @@ int main()
   return 0;
   }
   
-void testprogram()
+void testprogram(int j) 
   {
+     int m;
      clock_t start, end;
      double total;
+     double k1,k2;
+ 
+     AvlTree<int> T;
+ 
+     for(m = 1; m <= j; i++) 
+       {
+         T.insert(i);
+       }
+    
+     k1=rand()%(j/2); 
+    
+     k2=rand()%(j/2)+(j/2); 
 
      start = clock();
  
